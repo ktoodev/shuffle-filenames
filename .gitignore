@@ -1,2 +1,4 @@
+build
+dist
 test_files
 __pycache__
