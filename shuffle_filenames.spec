@@ -4,6 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['shuffle_filenames.py'],
+             pathex=['K:\\Branding\\StationIDs\\dev'],
              binaries=[],
              datas=[],
              hiddenimports=[],

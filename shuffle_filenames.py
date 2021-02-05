@@ -29,4 +29,3 @@ if not check_lock (dir_path, args.token):
     print ('Failed to validate the lock file (must have a "dir" value matching the directory to randomize and a "token" value matching the one used to call this script)')
 else:
     shuffle_names(dir_path)
-    print ('Lock file approved')
