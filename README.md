@@ -24,7 +24,7 @@ In Python:
 
     python shuffle_filenames.py --token token_value --dir C:\path\to\folder\to\randomize
 
-Executable package:
+Executable package ([downloadable from releases](https://github.com/ktoodev/shuffle-filenames/releases)):
 
     shuffle_filenames --token token_value --dir C:\path\to\folder\to\randomize
 
