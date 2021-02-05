@@ -7,6 +7,7 @@ from os import path
 import argparse
 
 from lock_file import check_lock
+from randomize_files import shuffle_names
 
 
 # set up parser args
