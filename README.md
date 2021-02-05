@@ -2,7 +2,7 @@
 
 Simple script to randomize the names of files in a directory (by randomly swapping with other filenames in the folder).
 
-| :warning: **Warning: while there's a "lock file" to try and make sure the program is run intentionally, this system is not foolproof - please use the script with care! Randomly shuffling filenames is usually very bad!** |
+| :warning: **Warning: while there's a "lock file" to try and make sure the program is run intentionally, this system is not foolproof - please read all the documentation and use the script with care! Randomly shuffling filenames is usually very bad!** |
 | --- |
 
 ## Usage
@@ -18,13 +18,20 @@ The script takes two corresponding command line arguments (`token` and `dir`), w
     dir: C:\path\to\folder\to\randomize
     token: token_value
 
-### Calling the script
 
-In Python:
+### Caveats and warnings
+
+- The script currently skips files that end in ".exe" or start with a "." or "_"
+- **The script is not currently designed to work with folders containing a mix of file types.** It **will** currently swap files without regard to their extensions, so if there are multiple file types you'll probably end up with some files that don't work anymore. 
+
+
+## Calling the script
+
+### In Python:
 
     python shuffle_filenames.py --token token_value --dir C:\path\to\folder\to\randomize
 
-Executable package ([downloadable from releases](https://github.com/ktoodev/shuffle-filenames/releases)):
+### Executable package ([downloadable from releases](https://github.com/ktoodev/shuffle-filenames/releases)):
 
     shuffle_filenames --token token_value --dir C:\path\to\folder\to\randomize
 
@@ -32,5 +39,8 @@ Executable package ([downloadable from releases](https://github.com/ktoodev/shuf
 ## Build
 
 To build an executable with PyInstaller:
+    # install pyinstaller if it isn't already installed
+    https://github.com/ktoodev/shuffle-filenames
 
+    # run pyinstaller 
     python -m PyInstaller --onefile 'shuffle_filenames.py'
